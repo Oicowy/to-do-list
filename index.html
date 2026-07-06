@@ -1,96 +1,57 @@
-﻿<!doctype html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>待办清单</title>
+    <title>OSIGHT Technology</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <section class="intro" aria-labelledby="app-title">
-        <div class="brand">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" role="img">
-              <path d="M8 17.2 13.4 22 24.6 9.8" />
-              <path d="M7 6.5h18a2.5 2.5 0 0 1 2.5 2.5v14a2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 23V9A2.5 2.5 0 0 1 7 6.5Z" />
-            </svg>
-          </span>
-          <div>
-            <p class="eyebrow">Daily Planner</p>
-            <h1 id="app-title">待办清单</h1>
-          </div>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="OSIGHT Technology home">
+        <span class="brand-mark">O</span>
+        <span class="brand-copy"><strong>OSIGHT</strong><small>Technology Lab</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Page sections">
+        <a href="#intro">Introduction</a><a href="#technology">Technology List</a><a href="#products">Products</a>
+      </nav>
+      <a class="header-action" href="#technology">Explore</a>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">OSIGHT Technologies</h1>
+          <div class="hero-actions"><a class="button button-primary" href="#technology">Explore Technologies</a><button class="button button-ghost" type="button" data-video="OSIGHT Technology Overview">Watch Demo</button></div>
         </div>
-        <div class="date-pill" aria-live="polite">
-          <span id="weekday">今天</span>
-          <strong id="today-date">--</strong>
+        <div class="hero-art abstract-hero" role="img" aria-label="Abstract OSIGHT technology interface">
+          <div class="scan-grid" aria-hidden="true"></div>
+          <div class="range-line range-line-a" aria-hidden="true"></div>
+          <div class="range-line range-line-b" aria-hidden="true"></div>
+          <div class="target-reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <div class="abstract-core" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="data-marks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         </div>
       </section>
-
-      <section class="todo-layout" aria-label="待办清单工作区">
-        <aside class="status-panel" aria-label="完成进度">
-          <div class="progress-wrap">
-            <svg class="progress-ring" viewBox="0 0 42 42" aria-hidden="true">
-              <circle class="progress-track" cx="21" cy="21" r="15.915" />
-              <circle id="progress-value" class="progress-value" cx="21" cy="21" r="15.915" pathLength="100" />
-            </svg>
-            <div class="progress-copy">
-              <span id="progress-percent">0%</span>
-              <p>已完成</p>
-            </div>
-          </div>
-
-          <dl class="stats">
-            <div><dt>全部</dt><dd id="total-count">0</dd></div>
-            <div><dt>待处理</dt><dd id="active-count">0</dd></div>
-            <div><dt>已完成</dt><dd id="done-count">0</dd></div>
-          </dl>
-        </aside>
-
-        <section class="task-panel" aria-label="任务列表">
-          <form id="todo-form" class="task-form" autocomplete="off">
-            <label class="sr-only" for="task-input">新增待办</label>
-            <input id="task-input" name="task" type="text" maxlength="90" placeholder="写下下一件事" required />
-            <button class="icon-button add-button" type="submit" aria-label="新增任务" title="新增任务">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
-            </button>
-          </form>
-
-          <div class="toolbar">
-            <div class="filters" aria-label="筛选任务">
-              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
-              <button class="filter-button" type="button" data-filter="active" aria-pressed="false">待处理</button>
-              <button class="filter-button" type="button" data-filter="done" aria-pressed="false">已完成</button>
-            </div>
-            <button id="clear-completed" class="text-button" type="button">清除已完成</button>
-          </div>
-
-          <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
-
-          <div id="empty-state" class="empty-state" hidden>
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <path d="M21 18h38a5 5 0 0 1 5 5v34a5 5 0 0 1-5 5H21a5 5 0 0 1-5-5V23a5 5 0 0 1 5-5Z" />
-              <path d="M27 34h26M27 46h18M27 28l4 4 7-8" />
-            </svg>
-            <p>没有符合条件的待办</p>
-          </div>
-        </section>
+      <section id="intro" class="intro-section page-band" aria-labelledby="intro-title">
+        <div class="section-heading"><p class="eyebrow">Introduction</p><h2 id="intro-title">PATENTED OPTICS FOR FIELD READINESS</h2></div>
+        <div class="intro-body"><p>OSIGHT technology combines mechanical design, battery intelligence, motion sensing, and sighting control into a practical optic experience. The page helps users understand what each patented system solves, where it appears on the product, and why it improves real use.</p>
+          <div class="value-grid"><article><span class="value-icon">01</span><h3>Instant Readiness</h3><p>Ready when needed.</p></article><article><span class="value-icon">02</span><h3>Smarter Power</h3><p>Fast power check.</p></article><article><span class="value-icon">03</span><h3>Faster Control</h3><p>Faster sight control.</p></article></div>
+        </div>
       </section>
+      <section id="technology" class="technology-list" aria-labelledby="technology-title"><div class="section-heading center"><p class="eyebrow">Technology List</p><h2 id="technology-title">OSIGHT TECHNOLOGY LINEUP</h2></div>
+        <div class="tech-grid" role="list"><button class="tech-card is-active" type="button" data-target="mcc"><span class="tech-emblem mcc-emblem"><span class="badge-code">MCC</span></span><strong>MCC&trade;</strong><small>Magnetic Charging Cover</small></button><button class="tech-card" type="button" data-target="cbrs"><span class="tech-emblem cbrs-emblem"><span class="badge-code">CBRS</span></span><strong>CBRS&trade;</strong><small>Collapsible Backup Rear Sight</small></button><button class="tech-card" type="button" data-target="amrs"><span class="tech-emblem amrs-emblem"><span class="badge-code">AMRS</span></span><strong>AMRS&trade;</strong><small>Advanced Multi-Reticle System</small></button><button class="tech-card" type="button" data-target="mat"><span class="tech-emblem mat-emblem"><span class="badge-code">MAT</span></span><strong>MAT&trade;</strong><small>Motion Activation Technology</small></button></div>
+      </section>
+      <section class="tech-detail-stack" aria-label="Technology details">
+        <article id="mcc" class="tech-section"><div class="tech-copy"><p class="tech-kicker">MCC&trade;</p><h2>Magnetic Charging Cover</h2><p>Check remaining battery and charge the optic through a weatherproof magnetic interface without removing the sight from the setup.</p><ul class="feature-list"><li>Integrated LED battery display</li><li>Magnetic charging contact</li><li>Weather-resistant cover design</li></ul><button class="button button-small" type="button" data-video="MCC Magnetic Charging Cover">Watch MCC Demo</button></div><div class="media-frame mcc-visual" role="img" aria-label="MCC charging cover product visualization"><span class="media-label">Battery Display</span><span class="charge-port"></span><span class="battery-bars"><i></i><i></i><i></i></span></div></article>
+        <article id="cbrs" class="tech-section flip"><div class="tech-copy"><p class="tech-kicker">CBRS&trade;</p><h2>Collapsible Backup Rear Sight</h2><p>A compact backup sight folds into the optic body and deploys quickly when the primary optic view is compromised.</p><ul class="feature-list"><li>Instant mechanical backup</li><li>Low-profile protected form</li><li>Built for emergency alignment</li></ul><button class="button button-small" type="button" data-video="CBRS Backup Rear Sight">Watch CBRS Demo</button></div><div class="media-frame cbrs-visual" role="img" aria-label="CBRS collapsible backup sight visualization"><span class="media-label">Deployable Sight</span><span class="rear-sight"></span><span class="sight-line"></span></div></article>
+        <article id="amrs" class="tech-section"><div class="tech-copy"><p class="tech-kicker">AMRS&trade;</p><h2>Advanced Multi-Reticle System</h2><p>Switch between reticle modes to match the distance, lighting, and engagement style without losing visual clarity.</p><ul class="feature-list"><li>Multiple reticle combinations</li><li>Fast mode recognition</li><li>Adaptable sight picture</li></ul><button class="button button-small" type="button" data-video="AMRS Multi-Reticle System">Watch AMRS Demo</button></div><div class="media-frame amrs-visual" role="img" aria-label="AMRS reticle mode visualization"><span class="media-label">Reticle Modes</span><span class="reticle-dot"></span><span class="reticle-ring"></span><span class="reticle-cross"></span></div></article>
+        <article id="mat" class="tech-section flip"><div class="tech-copy"><p class="tech-kicker">MAT&trade;</p><h2>Motion Activation Technology</h2><p>The optic detects movement, wakes automatically, and conserves battery while remaining ready for immediate use.</p><ul class="feature-list"><li>Motion-triggered wake</li><li>Battery-saving standby</li><li>Always-ready optic status</li></ul><button class="button button-small" type="button" data-video="MAT Motion Activation Technology">Watch MAT Demo</button></div><div class="media-frame mat-visual" role="img" aria-label="MAT motion activation visualization"><span class="media-label">Motion Wake</span><span class="motion-wave wave-a"></span><span class="motion-wave wave-b"></span><span class="motion-module"></span></div></article>
+      </section>
+      <section id="products" class="conversion-band"><div><p class="eyebrow">Product Path</p><h2>See these technologies in OSIGHT optics.</h2><p>Link each technology to compatible optics and demo videos.</p></div><div class="product-links" aria-label="Related OSIGHT products"><a href="https://www.osight.com/" target="_blank" rel="noreferrer"><strong>Osight XE AMRS</strong><span>AMRS-ready product story</span></a><a href="https://www.osight.com/" target="_blank" rel="noreferrer"><strong>Osight XR</strong><span>Rugged optic lineup</span></a><button type="button" data-video="OSIGHT Product Demonstrations"><strong>Watch demos</strong><span>Feature videos by technology</span></button></div></section>
+      <section class="subscribe"><div><h2>Get OSIGHT updates</h2><p>Product technology notes, release updates, and training media.</p></div><form class="subscribe-form"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Email address" required /><button class="button button-primary" type="submit">Subscribe</button></form></section>
     </main>
-
-    <template id="todo-template">
-      <li class="todo-item">
-        <label class="check-control">
-          <input type="checkbox" />
-          <span aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4 9.2 7.5 12.5 14 5.5" /></svg></span>
-        </label>
-        <div class="task-text"><span class="task-title"></span><small class="task-meta"></small></div>
-        <button class="icon-button delete-button" type="button" aria-label="删除任务" title="删除任务">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 11v6M14 11v6M9 7l1-2h4l1 2M7 7l1 13h8l1-13" /></svg>
-        </button>
-      </li>
-    </template>
-
+    <footer class="site-footer"><p>OSIGHT Technology Concept Page</p><a href="#top">Back to top</a></footer>
+    <div class="video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="video-shell"><button class="modal-close" type="button" aria-label="Close demo">×</button><div class="video-surface"><span class="play-core"></span><span class="video-scan"></span></div><div class="video-copy"><p class="eyebrow">Demo Preview</p><h2 id="modal-title">OSIGHT Technology Overview</h2><p>This area is designed for your real product video. The interaction already supports opening a focused demo view from each technology module.</p></div></div></div>
     <script src="./app.js"></script>
   </body>
 </html>
