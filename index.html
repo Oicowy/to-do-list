@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待办清单</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro" aria-labelledby="app-title">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <path d="M8 17.2 13.4 22 24.6 9.8" />
+              <path d="M7 6.5h18a2.5 2.5 0 0 1 2.5 2.5v14a2.5 2.5 0 0 1-2.5 2.5H7A2.5 2.5 0 0 1 4.5 23V9A2.5 2.5 0 0 1 7 6.5Z" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Daily Planner</p>
+            <h1 id="app-title">待办清单</h1>
+          </div>
+        </div>
+        <div class="date-pill" aria-live="polite">
+          <span id="weekday">今天</span>
+          <strong id="today-date">--</strong>
+        </div>
+      </section>
+
+      <section class="todo-layout" aria-label="待办清单工作区">
+        <aside class="status-panel" aria-label="完成进度">
+          <div class="progress-wrap">
+            <svg class="progress-ring" viewBox="0 0 42 42" aria-hidden="true">
+              <circle class="progress-track" cx="21" cy="21" r="15.915" />
+              <circle id="progress-value" class="progress-value" cx="21" cy="21" r="15.915" pathLength="100" />
+            </svg>
+            <div class="progress-copy">
+              <span id="progress-percent">0%</span>
+              <p>已完成</p>
+            </div>
+          </div>
+
+          <dl class="stats">
+            <div><dt>全部</dt><dd id="total-count">0</dd></div>
+            <div><dt>待处理</dt><dd id="active-count">0</dd></div>
+            <div><dt>已完成</dt><dd id="done-count">0</dd></div>
+          </dl>
+        </aside>
+
+        <section class="task-panel" aria-label="任务列表">
+          <form id="todo-form" class="task-form" autocomplete="off">
+            <label class="sr-only" for="task-input">新增待办</label>
+            <input id="task-input" name="task" type="text" maxlength="90" placeholder="写下下一件事" required />
+            <button class="icon-button add-button" type="submit" aria-label="新增任务" title="新增任务">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+            </button>
+          </form>
+
+          <div class="toolbar">
+            <div class="filters" aria-label="筛选任务">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+              <button class="filter-button" type="button" data-filter="active" aria-pressed="false">待处理</button>
+              <button class="filter-button" type="button" data-filter="done" aria-pressed="false">已完成</button>
+            </div>
+            <button id="clear-completed" class="text-button" type="button">清除已完成</button>
+          </div>
+
+          <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+          <div id="empty-state" class="empty-state" hidden>
+            <svg viewBox="0 0 80 80" aria-hidden="true">
+              <path d="M21 18h38a5 5 0 0 1 5 5v34a5 5 0 0 1-5 5H21a5 5 0 0 1-5-5V23a5 5 0 0 1 5-5Z" />
+              <path d="M27 34h26M27 46h18M27 28l4 4 7-8" />
+            </svg>
+            <p>没有符合条件的待办</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="todo-template">
+      <li class="todo-item">
+        <label class="check-control">
+          <input type="checkbox" />
+          <span aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4 9.2 7.5 12.5 14 5.5" /></svg></span>
+        </label>
+        <div class="task-text"><span class="task-title"></span><small class="task-meta"></small></div>
+        <button class="icon-button delete-button" type="button" aria-label="删除任务" title="删除任务">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 11v6M14 11v6M9 7l1-2h4l1 2M7 7l1 13h8l1-13" /></svg>
+        </button>
+      </li>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
